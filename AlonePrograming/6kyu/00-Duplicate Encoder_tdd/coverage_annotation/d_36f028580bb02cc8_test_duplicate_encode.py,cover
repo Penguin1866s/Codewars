@@ -1,0 +1,3 @@
+> from src.duplicate_encode import duplicate_encode
+> def test_characters_non_repeat():
+>     assert duplicate_encode('pin') == '((('

@@ -1,0 +1,3 @@
+from src.loose_change import loose_change
+def test_zero_input():
+    assert loose_change(0) == {'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0}

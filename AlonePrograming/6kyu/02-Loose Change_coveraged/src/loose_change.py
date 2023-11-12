@@ -1,0 +1,26 @@
+def loose_change(cents):
+    change_value = {'Pennies': 1, 'Nickels': 5, 'Dimes': 10, 'Quarters': 25}
+    change_dict = {'Pennies': 0, 'Nickels': 0, 'Dimes': 0, 'Quarters': 0}
+    cents = int(cents)
+    if cents <= 0:
+        return change_dict
+    else:
+        pass
+    while cents > 0:
+        if cents >= change_value['Quarters']:
+            change_dict['Quarters'] += 1
+            cents -= change_value['Quarters']
+            continue
+        elif cents >= change_value['Dimes']:
+            change_dict['Dimes'] += 1
+            cents -= change_value['Dimes']
+            continue
+        elif cents >= change_value['Nickels']:
+            change_dict['Nickels'] += 1
+            cents -= change_value['Nickels']
+            continue
+        elif cents >= change_value['Pennies']:
+            change_dict['Pennies'] += 1
+            cents -= change_value['Pennies']
+            continue
+    return change_dict
